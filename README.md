@@ -9,17 +9,20 @@ Nõuded
 Python 3.8+
 Veebikaamera (sisseehitatud või USB)
 
-Installimine
-bashgit clone https://github.com/sinu-kasutajanimi/camera-ai-app
-cd camera-ai-app
 
-python -m venv venv
-.\venv\Scripts\Activate.ps1   # Windows
-source venv/bin/activate       # Linux / Mac
+# 1. Virtuaalkeskkond
+py -m venv venv
+.\venv\Scripts\Activate.ps1
+
+# 2. Sõltuvused
+pip install opencv-python ultralytics numpy
+
+# 3. Käivita
+py camera.py
 
 pip install opencv-python ultralytics numpy
 Käivitamine
-bashpython camera_ai_app.py
+py camera.py
 
 Esimesel käivitusel laaditakse YOLOv11 mudel automaatselt alla (~6 MB).
 
